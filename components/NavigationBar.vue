@@ -1,11 +1,7 @@
 <template>
-  <div class="sticky top-0 z-50">
-    <nav class="flex items-center justify-between px-4 py-2 bg-white shadow-md">
-      <NuxtImg
-        src="/images/set_logo.png"
-        alt="Logo"
-        class="size-24 sm:size-32"
-      />
+  <div class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="flex items-center justify-between px-4 py-2">
+      <img src="/images/set_logo.png" alt="Logo" class="size-24 sm:size-32" />
       <button
         class="text-gray-600 lg:hidden focus:outline-none"
         @click="toggleMenu"
@@ -43,7 +39,11 @@
       </button>
       <ul class="hidden space-x-6 text-gray-600 lg:flex">
         <template v-for="item in navItems" :key="item.label">
-          <NavItem :item="item" :active="active" />
+          <NavItem
+            :item="item"
+            :active="active"
+            @update-active="updateActive"
+          />
         </template>
       </ul>
       <PrimaryButton class="hidden lg:block" label="Enroll now" />
@@ -54,7 +54,12 @@
     >
       <ul class="flex flex-col items-center space-y-4">
         <template v-for="item in navItems" :key="item.label">
-          <NavItem @click="toggleMenu" :item="item" :active="active" />
+          <NavItem
+            :item="item"
+            :active="active"
+            @update-active="updateActive"
+            @click="toggleMenu"
+          />
         </template>
       </ul>
       <PrimaryButton label="Enroll now" />
@@ -63,8 +68,11 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+import NavItem from "./NavItem.vue";
+
 const navItems = [
-  { label: "Home", link: "/" },
+  { label: "Home", link: "home" },
   { label: "About Us", link: "about-us" },
   { label: "Programs", link: "programs" },
   { label: "Tutors", link: "tutors" },
@@ -77,5 +85,9 @@ const menuOpen = ref(false);
 
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
+};
+
+const updateActive = (label) => {
+  active.value = label;
 };
 </script>
