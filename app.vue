@@ -1,6 +1,7 @@
 <template>
   <div>
     <NavigationBar />
+    <HeroCarousel />
     <HeroSection />
     <ServiceSection />
     <ReviewSection />

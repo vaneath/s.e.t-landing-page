@@ -11,17 +11,9 @@
         creativity, and builds a strong foundation for a successful future in
         science and beyond.
       </p>
-      <div class="mt-8 space-y-4 sm:space-y-0 sm:space-x-4">
-        <button
-          class="px-6 py-3 text-white bg-primary rounded hover:opacity-90"
-        >
-          Enroll now
-        </button>
-        <button
-          class="px-6 py-3 text-primary bg-white border border-primary rounded hover:bg-primary hover:text-white"
-        >
-          Explore our programs
-        </button>
+      <div class="mt-8 space-x-4">
+        <PrimaryButton label="Enroll now" />
+        <OutlinedButton label="Learn more" />
       </div>
     </div>
   </Section>

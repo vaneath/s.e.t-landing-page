@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky top-0">
+  <div class="sticky top-0 z-50">
     <nav class="flex items-center justify-between px-4 py-2 bg-white shadow-md">
       <NuxtImg
         src="/images/set_logo.png"
@@ -7,7 +7,7 @@
         class="size-24 sm:size-32"
       />
       <button
-        class="text-gray-600 md:hidden focus:outline-none"
+        class="text-gray-600 lg:hidden focus:outline-none"
         @click="toggleMenu"
       >
         <svg
@@ -41,26 +41,23 @@
           />
         </svg>
       </button>
-      <ul class="hidden space-x-6 text-gray-600 md:flex">
+      <ul class="hidden space-x-6 text-gray-600 lg:flex">
         <template v-for="item in navItems" :key="item.label">
           <NavItem :item="item" :active="active" />
         </template>
       </ul>
-      <button
-        class="hidden sm:block px-4 py-2 text-sm font-medium text-white bg-primary rounded hover:bg-primary"
-      >
-        Enroll now
-      </button>
+      <PrimaryButton class="hidden lg:block" label="Enroll now" />
     </nav>
     <div
       v-if="menuOpen"
-      class="flex flex-col items-center py-4 space-y-4 text-gray-600 bg-white shadow-md md:hidden"
+      class="flex flex-col items-center py-4 space-y-4 text-gray-600 bg-white shadow-md lg:hidden"
     >
       <ul class="flex flex-col items-center space-y-4">
         <template v-for="item in navItems" :key="item.label">
           <NavItem @click="toggleMenu" :item="item" :active="active" />
         </template>
       </ul>
+      <PrimaryButton label="Enroll now" />
     </div>
   </div>
 </template>
