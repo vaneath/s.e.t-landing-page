@@ -1,5 +1,5 @@
 <template>
-  <Section>
+  <Section id="programs">
     <div class="pt-40 sm:pt-44 px-4">
       <div class="mb-10">
         <h2 class="text-3xl font-bold text-gray-800 mb-1">Our Programs</h2>
