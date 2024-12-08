@@ -3,8 +3,10 @@
     <NavigationBar />
     <HeroCarousel />
     <HeroSection />
-    <ServiceSection />
+    <ProgramSection />
+    <TutorSection />
     <ReviewSection />
+    <Footer />
   </div>
 </template>
 

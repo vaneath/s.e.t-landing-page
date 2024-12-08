@@ -1,6 +1,6 @@
 <template>
   <Section>
-    <div id="reviews" class="pt-40 sm:pt-44 px-6 min-h-screen">
+    <div id="reviews" class="pt-40 sm:pt-44 px-4">
       <div class="max-w-7xl mx-auto text-center">
         <h2 class="text-3xl font-bold text-gray-800 mb-6">
           What Our Clients Say
