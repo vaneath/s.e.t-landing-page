@@ -49,7 +49,7 @@
       <button
         class="hidden sm:block px-4 py-2 text-sm font-medium text-white bg-primary rounded hover:bg-primary"
       >
-        Sign In
+        Enroll now
       </button>
     </nav>
     <div
@@ -69,7 +69,7 @@
 const navItems = [
   { label: "Home", link: "/" },
   { label: "About Us", link: "about-us" },
-  { label: "Services", link: "services" },
+  { label: "Programs", link: "programs" },
   { label: "Tutors", link: "tutors" },
   { label: "Reviews", link: "reviews" },
   { label: "Contact", link: "contact" },
